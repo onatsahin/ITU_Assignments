@@ -1,0 +1,80 @@
+#Onat Şahin - 150150129 sahino15@itu.edu.try
+#Code to visualize one of the solutions found for the first structure
+
+import matplotlib.pyplot as plt
+
+f, axarr = plt.subplots(5, 2)
+
+axarr[0,0].set_xlim(0,8)
+axarr[0,0].set_ylim(0,6)
+axarr[0,0].add_patch(plt.Rectangle((6, 0), 1, 3, fc='b', edgecolor='black',linewidth = 3))
+
+axarr[0,1].set_xlim(0,8)
+axarr[0,1].set_ylim(0,6)
+axarr[0,1].add_patch(plt.Rectangle((6, 0), 1, 3, fc='b', edgecolor='black',linewidth = 3))
+axarr[0,1].add_patch(plt.Rectangle((3, 0), 1, 3, fc='b', edgecolor='black',linewidth = 3))
+
+axarr[1,0].set_xlim(0,8)
+axarr[1,0].set_ylim(0,6)
+axarr[1,0].add_patch(plt.Rectangle((6, 0), 1, 3, fc='b', edgecolor='black',linewidth = 3))
+axarr[1,0].add_patch(plt.Rectangle((3, 0), 1, 3, fc='b', edgecolor='black',linewidth = 3))
+axarr[1,0].add_patch(plt.Rectangle((0, 0), 3, 1, fc='b', edgecolor='black',linewidth = 3))
+
+axarr[1,1].set_xlim(0,8)
+axarr[1,1].set_ylim(0,6)
+axarr[1,1].add_patch(plt.Rectangle((6, 0), 1, 3, fc='b', edgecolor='black',linewidth = 3))
+axarr[1,1].add_patch(plt.Rectangle((3, 0), 1, 3, fc='b', edgecolor='black',linewidth = 3))
+axarr[1,1].add_patch(plt.Rectangle((0, 0), 3, 1, fc='b', edgecolor='black',linewidth = 3))
+axarr[1,1].add_patch(plt.Rectangle((5, 3), 3, 1, fc='b', edgecolor='black',linewidth = 3))
+
+axarr[2,0].set_xlim(0,8)
+axarr[2,0].set_ylim(0,6)
+axarr[2,0].add_patch(plt.Rectangle((6, 0), 1, 3, fc='b', edgecolor='black',linewidth = 3))
+axarr[2,0].add_patch(plt.Rectangle((3, 0), 1, 3, fc='b', edgecolor='black',linewidth = 3))
+axarr[2,0].add_patch(plt.Rectangle((0, 0), 3, 1, fc='b', edgecolor='black',linewidth = 3))
+axarr[2,0].add_patch(plt.Rectangle((5, 3), 3, 1, fc='b', edgecolor='black',linewidth = 3))
+axarr[2,0].add_patch(plt.Rectangle((2, 3), 3, 1, fc='b', edgecolor='black',linewidth = 3))
+
+axarr[2,1].set_xlim(0,8)
+axarr[2,1].set_ylim(0,6)
+axarr[2,1].add_patch(plt.Rectangle((6, 0), 1, 3, fc='b', edgecolor='black',linewidth = 3))
+axarr[2,1].add_patch(plt.Rectangle((3, 0), 1, 3, fc='b', edgecolor='black',linewidth = 3))
+axarr[2,1].add_patch(plt.Rectangle((0, 0), 3, 1, fc='b', edgecolor='black',linewidth = 3))
+axarr[2,1].add_patch(plt.Rectangle((5, 3), 3, 1, fc='b', edgecolor='black',linewidth = 3))
+axarr[2,1].add_patch(plt.Rectangle((2, 3), 3, 1, fc='b', edgecolor='black',linewidth = 3))
+axarr[2,1].add_patch(plt.Rectangle((1, 1), 1, 3, fc='b', edgecolor='black',linewidth = 3))
+
+axarr[3,0].set_xlim(0,8)
+axarr[3,0].set_ylim(0,6)
+axarr[3,0].add_patch(plt.Rectangle((6, 0), 1, 3, fc='b', edgecolor='black',linewidth = 3))
+axarr[3,0].add_patch(plt.Rectangle((3, 0), 1, 3, fc='b', edgecolor='black',linewidth = 3))
+axarr[3,0].add_patch(plt.Rectangle((0, 0), 3, 1, fc='b', edgecolor='black',linewidth = 3))
+axarr[3,0].add_patch(plt.Rectangle((5, 3), 3, 1, fc='b', edgecolor='black',linewidth = 3))
+axarr[3,0].add_patch(plt.Rectangle((2, 3), 3, 1, fc='b', edgecolor='black',linewidth = 3))
+axarr[3,0].add_patch(plt.Rectangle((1, 1), 1, 3, fc='b', edgecolor='black',linewidth = 3))
+axarr[3,0].add_patch(plt.Rectangle((4, 4), 3, 1, fc='b', edgecolor='black',linewidth = 3))
+
+axarr[3,1].set_xlim(0,8)
+axarr[3,1].set_ylim(0,6)
+axarr[3,1].add_patch(plt.Rectangle((6, 0), 1, 3, fc='b', edgecolor='black',linewidth = 3))
+axarr[3,1].add_patch(plt.Rectangle((3, 0), 1, 3, fc='b', edgecolor='black',linewidth = 3))
+axarr[3,1].add_patch(plt.Rectangle((0, 0), 3, 1, fc='b', edgecolor='black',linewidth = 3))
+axarr[3,1].add_patch(plt.Rectangle((5, 3), 3, 1, fc='b', edgecolor='black',linewidth = 3))
+axarr[3,1].add_patch(plt.Rectangle((2, 3), 3, 1, fc='b', edgecolor='black',linewidth = 3))
+axarr[3,1].add_patch(plt.Rectangle((1, 1), 1, 3, fc='b', edgecolor='black',linewidth = 3))
+axarr[3,1].add_patch(plt.Rectangle((4, 4), 3, 1, fc='b', edgecolor='black',linewidth = 3))
+axarr[3,1].add_patch(plt.Rectangle((1, 4), 3, 1, fc='b', edgecolor='black',linewidth = 3))
+
+axarr[4,0].set_xlim(0,8)
+axarr[4,0].set_ylim(0,6)
+axarr[4,0].add_patch(plt.Rectangle((6, 0), 1, 3, fc='b', edgecolor='black',linewidth = 3))
+axarr[4,0].add_patch(plt.Rectangle((3, 0), 1, 3, fc='b', edgecolor='black',linewidth = 3))
+axarr[4,0].add_patch(plt.Rectangle((0, 0), 3, 1, fc='b', edgecolor='black',linewidth = 3))
+axarr[4,0].add_patch(plt.Rectangle((5, 3), 3, 1, fc='b', edgecolor='black',linewidth = 3))
+axarr[4,0].add_patch(plt.Rectangle((2, 3), 3, 1, fc='b', edgecolor='black',linewidth = 3))
+axarr[4,0].add_patch(plt.Rectangle((1, 1), 1, 3, fc='b', edgecolor='black',linewidth = 3))
+axarr[4,0].add_patch(plt.Rectangle((4, 4), 3, 1, fc='b', edgecolor='black',linewidth = 3))
+axarr[4,0].add_patch(plt.Rectangle((1, 4), 3, 1, fc='b', edgecolor='black',linewidth = 3))
+axarr[4,0].add_patch(plt.Rectangle((2.5, 5), 3, 1, fc='b', edgecolor='black',linewidth = 3))
+
+plt.show()

@@ -1,0 +1,2 @@
+indent: yes
+indent-spaces: 4

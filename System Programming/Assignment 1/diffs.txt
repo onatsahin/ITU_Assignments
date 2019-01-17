@@ -1,0 +1,97 @@
+Only in for_project/arch/x86/boot/compressed: head_32.o.ur-detected
+diff -r for_project/arch/x86/boot/compressed/head_32.S linux-source-3.13.0/arch/x86/boot/compressed/head_32.S
+229c229
+< #ifdef CONFIG_EFI_STUB
+---
+> 
+236c236
+< #endif
+---
+> 
+Only in for_project/arch/x86/boot/compressed: misc.o.ur-detected
+Only in for_project/arch/x86/boot: pmjump.o.ur-detected
+Only in for_project/arch/x86/kernel/acpi: wakeup_32.o.ur-detected
+Only in for_project/arch/x86/kernel/acpi: wakeup_32.o.ur-safe
+Only in for_project/arch/x86/kernel: entry_32.o.ur-detected
+Only in for_project/arch/x86/kernel: entry_32.o.ur-safe
+Only in for_project/arch/x86/kernel: head_32.o.ur-detected
+Only in for_project/arch/x86/kernel: head_32.o.ur-safe
+Only in for_project/arch/x86/kernel: irq_32.o.ur-detected
+Only in for_project/arch/x86/kernel: irq_32.o.ur-safe
+Only in for_project/arch/x86/kernel: reboot.o.ur-detected
+Only in for_project/arch/x86/kernel: reboot.o.ur-safe
+Only in for_project/arch/x86/kernel: relocate_kernel_32.o.ur-detected
+Only in for_project/arch/x86/kernel: relocate_kernel_32.o.ur-safe
+Only in for_project/arch/x86/lib: checksum_32.o.ur-detected
+Only in for_project/arch/x86/lib: checksum_32.o.ur-safe
+Only in for_project/arch/x86/lib: retpoline.o.ur-detected
+Only in for_project/arch/x86/lib: retpoline.o.ur-safe
+Only in for_project/arch/x86/pci: pcbios.o.ur-detected
+Only in for_project/arch/x86/platform/efi: efi_stub_32.o.ur-detected
+Only in for_project/arch/x86/realmode/rm: trampoline_32.o.ur-detected
+Only in for_project/arch/x86/realmode/rm: trampoline_32.o.ur-safe
+diff -r for_project/arch/x86/syscalls/syscall_32.tbl linux-source-3.13.0/arch/x86/syscalls/syscall_32.tbl
+364d363
+< 355	i386	setmyFlag			sys_setmyFlag
+Only in for_project/: .config
+Only in for_project/: diffs.txt
+diff -r for_project/include/linux/init_task.h linux-source-3.13.0/include/linux/init_task.h
+218d217
+< 	.myFlag		=0,					\
+diff -r for_project/include/linux/sched.h linux-source-3.13.0/include/linux/sched.h
+1059d1058
+< 	int myFlag; // Added flag
+diff -r for_project/include/linux/syscalls.h linux-source-3.13.0/include/linux/syscalls.h
+852d851
+< asmlinkage long sys_setmyFlag(pid_t pid, int flag);
+diff -r for_project/kernel/exit.c linux-source-3.13.0/kernel/exit.c
+707,723d706
+< 	// Conditions hold enter
+< 	if(tsk->myFlag == 1 && task_nice(tsk) > 10){
+< 		// Create sibTemp for traverse
+< 		struct list_head *sibTemp;
+< 		// Process to kill
+< 		struct task_struct *sib; 
+< 		// Iterate through siblings
+< 		list_for_each(sibTemp,&(tsk->sibling) ){
+< 			// Convert list_head struct to task_struct
+< 			sib = list_entry(sibTemp,struct task_struct,sibling);
+< 			// Change flag to the zero for normal exit
+< 			sib->myFlag = 0;
+< 			siginfo_t infoForSignal;
+< 			kill_proc_info(SIGKILL,&infoForSignal,sib->pid);
+< 		}
+< 	}
+< 	
+diff -r for_project/kernel/fork.c linux-source-3.13.0/kernel/fork.c
+1564,1565c1564
+< 	//Initializing myFlag
+< 	p->myFlag = 0;
+---
+> 
+1650,1658c1649
+< 	
+< 	// Added part.
+< 	struct task_struct *thisProc = current;
+< 	
+< 	// Control flag and nice value of the current proc.
+< 	if(thisProc->myFlag == 1 && task_nice(thisProc) > 10){
+< 		return -EPERM;
+< 	}
+< 	
+---
+> 
+1702c1693
+< 		
+---
+> 
+1706c1697
+< 		
+---
+> 
+diff -r for_project/Makefile linux-source-3.13.0/Makefile
+540c540
+< core-y		:= usr/ setmyFlag/
+---
+> core-y		:= usr/
+Only in for_project/: setmyFlag
